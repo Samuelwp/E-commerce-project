@@ -1,0 +1,122 @@
+/*css de contatos*/
+
+*{
+    box-sizing:border-box;
+}
+body{
+    /*cor e tipo da fonte */
+    font-family: 'Quicksand', sans-serif;
+}
+
+.content{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.logo{
+    text-align: center; /*centralizer titulo */
+    font-size: 3em;
+    color:black;
+}
+
+.logo span{
+    color:green; /*cor da letra destacada na div*/
+}
+
+.contato-agrupar{
+    box-shadow: 0 0 20px 0 rgba(4, 32, 1, 0.3); /*cor da sombra do padding*/
+}
+.contato-agrupar > * {
+    padding:1em; /*espaço da  letra para borda*/
+}
+
+.contato-form {
+    background: #222222; /*diferença da cor de fundo*/
+}
+
+.contato-form form{
+    display:grid;  /*dividir os elementos*/
+    grid-template-columns: 1fr 1fr; /*dividir a coluna*/
+}
+
+.contato-form form .block {  
+   grid-column:  1 / 3;  /*determinar os elementos de uma classe*/
+}
+
+.contato-form form p{
+    padding: 0;
+    padding: 1em;
+}
+
+.contato-form form button,
+.contato-form input,
+.contato-form form textarea { /*formataçao do formulario*/
+    width: 100%;
+    padding: .7em; /*letras*/
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #02f34b;
+}
+
+.contato-form form button{
+    background: #2c7238;
+    color:#000;
+    border: 0;
+    text-transform: uppercase; /*maiusculo*/
+    padding: 1em;
+}
+
+.contato-form form button:hover,
+.contato-form form button:focus {
+    background: #416637; /*mudar cor do botao*/
+    color:#fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contato-info{
+    background: #000;
+
+}
+
+.contato-info h4,
+.contato-info ul,
+.contato-info p {
+    text-align: center; /*centralizar mais informaçoes*/
+    margin: 0 0 1rem 0;
+}
+
+.contato-info ul{
+  list-style: none; /*tirar as bolinhas*/
+  padding: 0;
+}
+
+.contato-info ul li {
+    padding: .3em; /*espaço entre as informaçoes*/
+}
+
+/*largura size*/
+@media(min-width: 700px) {
+
+
+   .contato-agrupar {
+       display: grid;
+       grid-template-columns: 2fr 1fr; /*dividir a tela em duas colunas, usando fraçao*/
+   }
+
+   .contato-agrupar > * {
+       padding: 2em;
+   }
+
+   .contato-info h4,
+   .contato-info ul,
+   .contato-info p {
+       padding: 1em; /*atua no texto*/
+       text-align: left;
+   }
+
+}
